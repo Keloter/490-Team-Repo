@@ -3,6 +3,16 @@ class AnnouncementsController < ApplicationController
       @announcement = Announcement.new
 	end
 
+  def update
+  @announcement = Announcement.find(params[:id])
+ 
+  if @announcement.update(announcement_params)
+    redirect_to @announcement
+  else
+    render 'edit'
+  end
+end
+
   def edit
       @announcement = Announcement.find(params[:id])
   end

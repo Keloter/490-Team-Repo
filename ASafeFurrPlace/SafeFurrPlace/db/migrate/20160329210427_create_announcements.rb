@@ -7,4 +7,7 @@ class CreateAnnouncements < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
+  def self.down
+    drop_table :attachments
+  end
 end

@@ -1,11 +1,24 @@
 Rails.application.routes.draw do
+  get 'items/new'
+
+  get 'items/create'
+
+  post 'items/create'
+
+  get 'items/show'
+
+  get 'items/new'
+
+  resources :photos
+  resources :items
   get 'welcome/index'
 
   resources :announcements
+  resources :documents
 
   get 'volunteer/index'
-  get  'about'   => 'static#about'
-  get  'contact' => 'static#contact'
+  get  'about'   => 'volunteer#about'
+  get  'contact' => 'volunteer#contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
