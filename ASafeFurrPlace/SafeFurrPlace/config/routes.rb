@@ -1,4 +1,20 @@
 Rails.application.routes.draw do
+  get 'uploads/index'
+
+  get 'uploads/new'
+
+  get 'uploads/create'
+
+  post 'upload/create'
+
+  get 'uploads/index'
+
+  get 'uploads/show'
+
+  get 'photo/show'
+
+  get 'photo/show'
+
   get 'items/new'
 
   get 'items/create'
@@ -9,7 +25,7 @@ Rails.application.routes.draw do
 
   get 'items/new'
 
-  resources :photos
+  resources :uploads
   resources :items
   get 'welcome/index'
 

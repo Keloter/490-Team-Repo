@@ -15,6 +15,7 @@
   <tbody>
     <% @documents.each do |document| %>
       <tr>
+        <% @directory = "public/images/upload/" + document.filename %>
         <td><%= image_tag(document.filename, :size => "80x80", :alt => "Picture", :width => '100', :height => '100') %></td>
         <td><%= document.filename %></td>
         <td><%= button_to 'Download', document, method: :get %></td>

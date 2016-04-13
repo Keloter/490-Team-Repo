@@ -23,6 +23,12 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.json
   def create
+    name = params[:document][:file].original_filename
+    directory = "app/assets/images/"
+    path = File.join(directory, name)
+    File.open(path, "wb") { |f| f.write(params[:document][:file].read) }
+    flash[:notice] = "File uploaded"
+
     @document = Document.new(document_params)
 
     respond_to do |format|
