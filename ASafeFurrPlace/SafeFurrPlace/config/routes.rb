@@ -32,6 +32,8 @@ Rails.application.routes.draw do
 
   resources :announcements
   resources :documents
+  resources :charges
+
 
   get 'volunteer/index'
   get  'about'   => 'volunteer#about'

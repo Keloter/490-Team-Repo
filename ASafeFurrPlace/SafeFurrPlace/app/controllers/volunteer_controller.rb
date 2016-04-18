@@ -9,4 +9,7 @@ class VolunteerController < ApplicationController
 
   def contact
   end
+
+  def donate
+  end
 end
