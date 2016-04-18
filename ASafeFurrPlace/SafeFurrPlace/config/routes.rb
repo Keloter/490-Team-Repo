@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   resources :uploads
   resources :items
   get 'welcome/index'
+  # get 'donate'
 
   resources :announcements
   resources :documents
@@ -35,6 +36,8 @@ Rails.application.routes.draw do
   get 'volunteer/index'
   get  'about'   => 'volunteer#about'
   get  'contact' => 'volunteer#contact'
+  get  'vdonate'  => 'volunteer#vdonate'
+  get  'donate'  => 'volunteer#donate'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
