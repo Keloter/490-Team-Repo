@@ -1,27 +1,20 @@
 <%= render 'layouts/vheader' %>
-
-
 <div class="container">
-  <div class="row">
+  <div class="box">
     <div class="col-md-12">
       <%= link_to 'New', new_announcement_path %>
       <table class="table">
-          <tbody>
+          <thead>
             <tr>
               <th>Title</th>
-              <th>Text</th>
-              <th colspan="2"></th>
-
-         
-          <% @announcement.each do |announcement| %>
             </tr>
-          
+          </thead>
+            <% @announcement.each do |announcement| %>
             <tr>
               <td><%= announcement.title %></td>
               <td><%= link_to 'Show', announcement_path(announcement) %></td>
               <td><%= link_to 'Edit', edit_announcement_path(announcement) %></td>
             </tr>
-          </tbody>
           <% end %>
         </table>
       </table>

@@ -1,12 +1,18 @@
 <%= render 'layouts/vheader' %>
-<p>
-  <strong>Title:</strong>
-  <%= @announcement.title %>
-</p>
- 
-<p>
-  <strong>Text:</strong>
-  <%= @announcement.text %>
-</p>
-<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
-<%= link_to 'Back', announcements_path %>
+<div class="container">
+  <div class="box">
+    <div class="col-md-12">
+    <p>
+      <strong>Title:</strong>
+      <%= @announcement.title %>
+    </p>
+     
+    <p>
+      <strong>Text:</strong>
+      <%= @announcement.text %>
+    </p>
+    <%= link_to 'Edit', edit_announcement_path(@announcement) %> |
+    <%= link_to 'Back', announcements_path %>
+		</div>
+	</div>
+</div>

@@ -1,33 +1,10 @@
 Rails.application.routes.draw do
-  get 'uploads/index'
-
-  get 'uploads/new'
-
-  get 'uploads/create'
-
-  post 'upload/create'
-
-  get 'uploads/index'
-
-  get 'uploads/show'
-
-  get 'photo/show'
-
-  get 'photo/show'
-
-  get 'items/new'
-
-  get 'items/create'
-
-  post 'items/create'
-
-  get 'items/show'
-
-  get 'items/new'
 
   resources :uploads
   resources :items
   get 'welcome/index'
+
+  get 'documents/pindex'
   # get 'donate'
 
   resources :announcements

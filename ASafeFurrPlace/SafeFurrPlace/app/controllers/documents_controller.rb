@@ -7,12 +7,14 @@ class DocumentsController < ApplicationController
     @documents = Document.all
   end
 
+  def pindex
+    @documents = Document.all
+  end
+
   # GET /documents/1
   # GET /documents/1.json
   def show
-    send_data(@document.file_contents,
-              type: @document.content_type,
-              filename: @document.filename)
+    @document = Document.find(params[:id])
   end
 
   # GET /documents/new
@@ -74,6 +76,6 @@ class DocumentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def document_params
-      params.require(:document).permit(:file)
+      params.require(:document).permit(:file, :animalname, :animalabout)
     end
 end
