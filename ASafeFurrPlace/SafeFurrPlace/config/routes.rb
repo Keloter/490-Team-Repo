@@ -1,33 +1,42 @@
 Rails.application.routes.draw do
-  get 'uploads/index'
 
-  get 'uploads/new'
+  delete '/logout', to: 'sessions#destroy', as: :logout
+  
+  get '/auth/:provider/callback', to: 'sessions#create'
 
-  get 'uploads/create'
+  get 'sessions/create'
 
-  post 'upload/create'
+  get 'sessions/destroy'
 
-  get 'uploads/index'
+  get 'stories/index'
 
-  get 'uploads/show'
+  get 'stories/new'
 
-  get 'photo/show'
+  get 'stories/create'
 
-  get 'photo/show'
+  get 'stories/edit'
 
-  get 'items/new'
+  get 'stories/update'
 
-  get 'items/create'
+  get 'stories/destroy'
 
-  post 'items/create'
+  get 'stories/show'
 
-  get 'items/show'
+  resources :stories
 
-  get 'items/new'
+  get 'user/index'
+
+  get 'user/login'
+
+  get 'auth/facebook', as: "auth_provider"
+  get 'auth/facebook/callback', to: 'user#login'
 
   resources :uploads
+  resources :user
   resources :items
   get 'welcome/index'
+
+  get 'documents/pindex'
   # get 'donate'
 
   resources :announcements
