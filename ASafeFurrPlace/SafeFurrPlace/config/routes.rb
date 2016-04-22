@@ -1,6 +1,38 @@
 Rails.application.routes.draw do
 
+  delete '/logout', to: 'sessions#destroy', as: :logout
+  
+  get '/auth/:provider/callback', to: 'sessions#create'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
+  get 'stories/index'
+
+  get 'stories/new'
+
+  get 'stories/create'
+
+  get 'stories/edit'
+
+  get 'stories/update'
+
+  get 'stories/destroy'
+
+  get 'stories/show'
+
+  resources :stories
+
+  get 'user/index'
+
+  get 'user/login'
+
+  get 'auth/facebook', as: "auth_provider"
+  get 'auth/facebook/callback', to: 'user#login'
+
   resources :uploads
+  resources :user
   resources :items
   get 'welcome/index'
 

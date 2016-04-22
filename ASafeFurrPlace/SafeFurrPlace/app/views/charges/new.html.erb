@@ -19,24 +19,7 @@
                     <%= image_tag("logo.png", :class => "img-responsive img-left") %>
                 </div>
                 <div class="col-md-6"><br><br><br>
-                    <%= form_tag charges_path do %>
-                      <article>
-                        <% if flash[:error].present? %>
-                          <div id="error_explanation">
-                            <p><%= flash[:error] %></p>
-                          </div>
-                        <% end %>
-                        <label class="amount">
-                          <span>Click to make a donation.</span>
-                        </label>
-                      </article>
-
-                      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                              data-description="A month's subscription"
-                              data-amount="500"
-                              data-locale="auto"></script>
-                    <% end %>
+                    <%= render 'form' %>
                 </div>
                 <div class="clearfix"></div>
             </div>
