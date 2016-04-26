@@ -34,8 +34,9 @@
     <!-- Navigation -->
     
             <!-- Brand and toggle get grouped for better mobile display -->
-    <div style="background: white; text-align: center; height: 140px;">
+    <div style="background: white; text-align: center; height: 170px;">
         <!-- The image will go here -->
+        <%= image_tag('combine.jpg', :alt => "Image") %>
     </div>            
     
     <div>        
@@ -54,7 +55,7 @@
                         <%= link_to "Contact", contact_path %>
                     </li>
                     <li>
-                        <%= link_to "Login/Volunteer"   %>
+                        <%= link_to "Login/Volunteer", 'session/login'   %>
                     </li>
         </ul>            
     </div>
