@@ -10,11 +10,12 @@
     <%= f.label :phoneNumber, 'Phone Number' %><br>
     <%= f.text_field :integer, :size => "30x10" %>
   </p>
-
+  
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="A month's subscription"
           data-amount="500"
           data-locale="auto">
   </script><br><br>
+  <h4>This is a quick donation of $5.00, clik <%= link_to 'HERE', '/welcome/donate' %> to donate more.</h4>
 <% end %>

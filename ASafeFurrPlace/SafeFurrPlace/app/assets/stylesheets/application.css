@@ -45,9 +45,24 @@
 }
 
 .active {
-    background-color: #4CAF50;
-}
+    background-color: inherit;
+ }
 
 .posted_date {
 	font-size: 8px;
+}
+.portals {
+    font-size: 1.25em;
+    line-height: 1.2;
+    list-style-type: none;
+    text-align: left;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2ECCFA;
+
+}
+.portals hover:not(.active){
+    background-color: white;
 }

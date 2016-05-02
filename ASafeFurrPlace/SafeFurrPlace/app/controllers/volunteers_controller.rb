@@ -14,7 +14,7 @@ class VolunteersController < ApplicationController
   		flash[:notice] = "The form is invalid"
   		flash[:color]  = "invalid"
   	end
-  	render "session/login"
+  	render "new"
   end
 
   def edit

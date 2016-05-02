@@ -15,7 +15,7 @@
                         </ul>
                      
                         <div class="tab-content" style="height: 280px;">
-                            <div id="tab1" class="tab active">
+                            <div id="tab1" class="tab active">                            
                                 <%= render 'form' %>
                             </div>
                      
@@ -51,31 +51,9 @@
                 </div>
                 
                 <div class="col-md-3 text-center">
-                    <% post = Story.all %>
+                    
                     <div class="well well-lg" style="background: #81DAF5;">
-                    <header class="w3-container w3-grey">
-                        <h4>Recent Posts</h4>
-                    </header><br>
-                    <% post.each_with_index do |post, i| %>
-                        
-                        
-                            
-
-                            <div class="well well-lg">
-                                <header class="w3-container w3-dark-grey">
-                                    <h4><%= post.title %></h4>
-                                </header>
-
-                                <div class="w3-container" style="font-size: 10px;">
-                                    <p><u><br><%= post.created_at.strftime("%b-%d-%Y") %>
-                                    <%= post.created_at.strftime("At %H:%M") %></p>
-                                </div>
-                              <div class="btn-group">  
-                              <%= link_to 'View', story_path(post), class: 'btn btn-info' %>
-                              </div>
-
-                            </div>  
-                    <% end %>    
+                    
                 </div>
 
             </div>

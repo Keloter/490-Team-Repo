@@ -3,7 +3,7 @@ class CreateStories < ActiveRecord::Migration
     create_table :stories do |t|
       t.string :title
       t.text :body
-      t.references :user, index: true, foreign_key: true
+      t.integer :user_id
 
       t.timestamps null: false
     end

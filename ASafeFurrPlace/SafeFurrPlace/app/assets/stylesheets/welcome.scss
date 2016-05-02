@@ -53,6 +53,7 @@
 		.tab-active {
 			background: transparent;
 			display: block;
+			width: 100%;
 		}
 
 .adoptable-pets {
@@ -73,4 +74,22 @@
 
 .plain {
 	
+}
+
+.welcome_form {
+	background: white;
+	width: auto;
+	height: auto;
+}
+.portals {
+	size: 14px;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2ECCFA;
+    text-align: left;
+}
+.portals hover:not(.active){
+    background-color: white;
 }

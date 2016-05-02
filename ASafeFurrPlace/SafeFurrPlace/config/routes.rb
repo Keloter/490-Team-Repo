@@ -1,17 +1,22 @@
 Rails.application.routes.draw do
+  
+  get 'documents/index'
+
+  get 'documents/new'
+
+  get 'documents/show'
+
+  resources :documents
+
+  get 'welcome/index'
+
+  get 'welcome/new'
+
+  get 'welcome/create'
+
+  post 'welcome/create'
 
   delete 'sessions' => 'sessions#destroy'
-
-  get 'sessions/login'
-
-  get 'sessions/home'
-
-  get 'sessions/profile'
-
-  get 'sessions/settings'
-
-  post'session/login_attempt'
-
   match ':controller(/:action(/:id))(.:format)', :via => [:get, :post]
   match "signup", :to => "users#new", :via => [:get, :post]
   match "login", :to => "session#login", :via => [:get, :post]
@@ -19,45 +24,6 @@ Rails.application.routes.draw do
   match "home", :to => "session#home", :via => [:get, :post]
   match "profile", :to => "session#profile", :via => [:get, :post]
   match "setting", :to => "session#setting", :via => [:get, :post]
-
-  get 'volunteers/new'
-  get 'volunteers/edit'
-
-  get 'stories/index'
-  get 'stories/new'
-  get 'stories/create'
-  get 'stories/edit'
-  get 'stories/update'
-  get 'stories/destroy'
-  get 'stories/show'
-
-  get 'user/index'
-  get 'user/login'
-
-  get 'auth/facebook', as: "auth_provider"
-  get 'auth/facebook/callback', to: 'user#login'
-
-  resources :stories
-  resources :uploads
-  resources :sessions
-  resources :volunteers
-  resources :user
-  resources :items
-  resources :announcements
-  resources :documents
-  resources :charges
-
-  # get 'donate'
-
-  
-
-  get 'welcome/index'
-  get 'documents/pindex'
-  get 'volunteer/index'
-  get  'about'   => 'volunteer#about'
-  get  'contact' => 'volunteer#contact'
-  get  'vdonate'  => 'volunteer#vdonate'
-  get  'donate'  => 'volunteer#donate'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

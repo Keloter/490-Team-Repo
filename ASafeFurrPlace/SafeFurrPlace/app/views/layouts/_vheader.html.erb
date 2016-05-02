@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
     <title>A SafeFurr Place Animal Rescue</title>
 
@@ -26,50 +27,42 @@
 </head>
 
 <header>
+  
 	<%#<div class="brand">A SafeFurr Place</div>
     <div class="address-bar">Animal Rescue</div> %>
     
     <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
+    
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">A SafeFurr Place</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+    <div style="background: white; text-align: center; height: 170px;">
+        <!-- The image will go here -->
+        <%= image_tag('combine.jpg', :alt => "Image") %>
+    </div>            
+    
+    <div>        
+        <ul class="welcome">
                     <li>
-                        <%= link_to "Home", root_path %>
+                        <%= link_to "Home", sessions_path %>
                     </li>
                     <li>
-                        <%= link_to "Announcements", announcements_path %>
+                        <%= link_to "Animals", documents_path %>
                     </li>
                     <%# <li>
                         To come....
                         <a href="blog.html">Blog</a>
                     </li> %>
                     <li>
-                        <%= link_to "Pet Database", documents_path %>
+                        <%= link_to "Contact" %>
                     </li>
                     <li>
-                        <%= link_to "Donations", vdonate_path %>
+                        <%= link_to 'Logout', '/welcome/', method: :destroy %>
                     </li>
-                    <li>
-                        <%= link_to "Sign Out", contact_path %>
-                    </li>
-
-                </ul>
-            </div>
+        </ul>            
+    </div>
+    
             <!-- /.navbar-collapse -->
-        </div>
+        
+    
         <!-- /.container -->
     </nav>
 </header>
