@@ -1,108 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+    <body style="background: white;">
+    <%= render 'layouts/header' %>
+        <div style="padding-top: 20px;">
+            <div>
+                <div class="col-md-6 text-center">
+                  <div class="well well-lg" style="background: #81DAF5;">
 
-<%= render 'layouts/header' %>
+                    <h1>Donate or Adopt</h1>
 
-<body>
-
-    <div class="container">
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12 text-center">
-                    <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <%= image_tag("slide-1.jpg", :class => "img-responsive img-full") %>
+                    <div class="tabs">
+                        <ul class="tab-links">
+                            <li class="active"><a href="#tab1">Register To Adopt</a></li>
+                            <li><a href="#tab2">Donate</a></li>
+                        </ul>
+                     
+                        <div class="tab-content" style="height: 280px;">
+                            <div id="tab1" class="tab active">
+                                <%= render 'form' %>
                             </div>
-                            <div class="item">
-                                <%= image_tag("slide-2.jpg", :class => "img-responsive img-full") %>
+                     
+                            <div id="tab2" class="tab">
+                                <%= render 'form2' %>
                             </div>
-                            <div class="item">
-                                <%= image_tag("slide-3.jpg", :class => "img-responsive img-full") %>
-                            </div>
+                     
                         </div>
-
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <span class="icon-prev"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <span class="icon-next"></span>
-                        </a>
                     </div>
-                    <h2 class="brand-before">
-                        <small>Welcome to</small>
-                    </h2>
-                    <h1 class="brand-name">A SafeFurr Place</h1>
-                    <hr class="tagline-divider">
-                    <h2>
-                        <small>
-                            <strong>Animal Rescue</strong>
-                        </small>
-                    </h2>
+                    
+                  </div>
+
+                  <div class="well well-lg" style="height: auto; background: #81DAF5">
+                    <h2>Featured Pets</h2>
+                      
+                        <% doc = Document.all %>
+                        <% doc.each_with_index do |document, i| %>
+                          <% if i < 10 %>
+                           
+                           <div class="well well-lg text-center" style="width: 180; display: inline-block;"> 
+                            <div class="w3-card-2" style="width: 150px; border-radius: 25px;">
+                                <%= image_tag(document.filename, :size => "150x150", :alt => "Image") %>
+                                    
+                                    <div class="w3-container w3-center" style="background-color:white; border-radius:25px;">
+                                        <p><br><%= document.animalname %></p>
+                                    </div>
+                            </div>
+                           </div>
+                           
+                          <% end %>  
+                        <% end %>
+                  </div>
                 </div>
+                
+                <div class="col-md-3 text-center">
+                    <% post = Story.all %>
+                    <div class="well well-lg" style="background: #81DAF5;">
+                    <header class="w3-container w3-grey">
+                        <h4>Recent Posts</h4>
+                    </header><br>
+                    <% post.each_with_index do |post, i| %>
+                        
+                        
+                            
+
+                            <div class="well well-lg">
+                                <header class="w3-container w3-dark-grey">
+                                    <h4><%= post.title %></h4>
+                                </header>
+
+                                <div class="w3-container" style="font-size: 10px;">
+                                    <p><u><br><%= post.created_at.strftime("%b-%d-%Y") %>
+                                    <%= post.created_at.strftime("At %H:%M") %></p>
+                                </div>
+                              <div class="btn-group">  
+                              <%= link_to 'View', story_path(post), class: 'btn btn-info' %>
+                              </div>
+
+                            </div>  
+                    <% end %>    
+                </div>
+
+            </div>
+            <div class="col-md-3 text-center">
+             <div class="well well-lg" style="background: #81DAF5;">
+                <p>This is going to be a query bar for pets based on size gender etc.</p>
+             </div>
+             <div class="well well-lg" style="background: #81DAF5;">
+                <p>This is going to be...</p>
+             </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Who 
-                        <strong>we are</strong>
-                    </h2>
-                    <hr>
-                    <%= image_tag("logo.png", :class => "img-responsive img-left") %>
-                    <hr class="visible-xs">
-                    <p>A small non-profit organization with a completed 501c3 staus based in Bakersfiefld, CA (Kern County). Every animal deserves to live in a "SafeFurr" place!</p>
-                    <p>Our mission is to rescue, rehabilitate and re-home animals in need in the area of Kern County; as well as educate our local community about the pet overpopulation problem and assist them in becoming responsible pet owners.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">
-                        <strong>Donate!</strong>
-                    </h2>
-                    <hr>
-                    <p>To come...</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-    <%= render 'layouts/footer' %>
-
-    <!-- jQuery -->
-    <%= javascript_include_tag "jquery" %>
-
-    <!-- Bootstrap Core JavaScript -->
-    <%= javascript_include_tag "bootstrap.min" %>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-
-</body>
-
+    </body>
 </html>
-<h1>Volunteer#landing page</h1>
-<%= link_to 'Announcements', controller: 'announcements' %>	

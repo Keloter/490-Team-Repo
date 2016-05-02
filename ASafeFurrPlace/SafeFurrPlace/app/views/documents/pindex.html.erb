@@ -1,0 +1,71 @@
+<%= render 'layouts/header' %>
+<div class="container">
+  <div class="row">
+    <div class="box">
+        <div class="col-lg-12 text-center">
+            <div id="carousel-example-generic" class="carousel slide">
+                <!-- Indicators -->
+                
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                <% @documents.each_with_index do |document, i| %>
+                <% if i == 0 %>
+                    <div class="item active">
+                         <div class="w3-container w3-center">
+                              <h2><%= document.animalname %></h2>
+                         </div>
+                    <div class="w3-card-12">
+                      <%= link_to image_tag(document.filename, :size => "1200x500", :alt => "Picture"), document_path(document) %>
+                      
+                    </div>
+                        
+                    </div>
+                <% else %>
+                    <div class="item">
+                         <div class="w3-container w3-center">
+                              <h2><%= document.animalname %></h2>
+                         </div>
+                         <div class="w3-card-12">
+                         <%= link_to image_tag(document.filename, :size => "1200x500", :alt => "Picture"), document_path(document) %>
+                           
+                         </div>
+                    </div>
+                <% end %>
+
+                <% end %>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+            <h2 class="brand-before">
+                <small>Click Image to See More</small>
+            </h2>
+            <h1 class="brand-name">A SafeFurr Place</h1>
+            <hr class="tagline-divider">
+            <h2>
+                <small>
+                    <strong>Animal Rescue</strong>
+                </small>
+            </h2>
+            <div style="width: auto; position: relative; float: center;">
+             <table>
+              <tr>
+                <% @documents.each_with_index do |document, i| %>
+                  <%= link_to image_tag(document.filename, :size => "100x100", :alt => "Picture"), document_path(document) %>
+                <% end %>
+              </tr>
+             </table>
+            </div> 
+        </div>
+    </div>
+  </div>
+</div>
+
+

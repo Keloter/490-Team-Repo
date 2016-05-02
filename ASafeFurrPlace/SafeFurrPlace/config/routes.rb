@@ -1,40 +1,58 @@
 Rails.application.routes.draw do
-  get 'uploads/index'
 
-  get 'uploads/new'
+  delete 'sessions' => 'sessions#destroy'
 
-  get 'uploads/create'
+  get 'sessions/login'
 
-  post 'upload/create'
+  get 'sessions/home'
 
-  get 'uploads/index'
+  get 'sessions/profile'
 
-  get 'uploads/show'
+  get 'sessions/settings'
 
-  get 'photo/show'
+  post'session/login_attempt'
 
-  get 'photo/show'
+  match ':controller(/:action(/:id))(.:format)', :via => [:get, :post]
+  match "signup", :to => "users#new", :via => [:get, :post]
+  match "login", :to => "session#login", :via => [:get, :post]
+  match "logout", :to => "session#logout", :via => [:get, :post]
+  match "home", :to => "session#home", :via => [:get, :post]
+  match "profile", :to => "session#profile", :via => [:get, :post]
+  match "setting", :to => "session#setting", :via => [:get, :post]
 
-  get 'items/new'
+  get 'volunteers/new'
+  get 'volunteers/edit'
 
-  get 'items/create'
+  get 'stories/index'
+  get 'stories/new'
+  get 'stories/create'
+  get 'stories/edit'
+  get 'stories/update'
+  get 'stories/destroy'
+  get 'stories/show'
 
-  post 'items/create'
+  get 'user/index'
+  get 'user/login'
 
-  get 'items/show'
+  get 'auth/facebook', as: "auth_provider"
+  get 'auth/facebook/callback', to: 'user#login'
 
-  get 'items/new'
-
+  resources :stories
   resources :uploads
+  resources :sessions
+  resources :volunteers
+  resources :user
   resources :items
-  get 'welcome/index'
-  # get 'donate'
-
   resources :announcements
   resources :documents
   resources :charges
 
+  # get 'donate'
 
+  
+
+  get 'welcome/index'
+  get 'documents/pindex'
   get 'volunteer/index'
   get  'about'   => 'volunteer#about'
   get  'contact' => 'volunteer#contact'

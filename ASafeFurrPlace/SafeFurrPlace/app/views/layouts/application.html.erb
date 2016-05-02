@@ -7,7 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+	<div class="Main_Header">
+		<%unless session[:volunteer_id]%>
+			<ul class="nav">
+				<li><%= link_to "Portal" , '/session/home' %> |</li>
+				<li><%= link_to "Login" , '/session/login' %> |</li>
+			</ul>
+		<%else%>
+			<ul class="nav">
+				<li><%= link_to "Portal" , '/session/home' %> |</li>
+				<li><%= link_to "Profile" , '/session/profile' %> |</li>
+				<li><%= link_to "Setting" , '/session/setting' %> |</li>
+				<li><%= link_to :Logout , sessions_path, method: :delete %></li>	
+			</ul>
+		<%end%>
+	</div>
+	<% if flash[:color]== "valid" %>
+		<div class="valid_notice">
+			<p><%= flash[:notice]%></p>
+		</div>
+	<% elsif flash[:color]== "invalid"%>
+		<div class="invalid_notice">
+			<p><%=flash[:notice]%></p>
+		</div>
+	<%else%>
+		<div class="notice">
+			<p><%=flash[:notice]%></p>
+		</div>
+	<%end%>
 <%= yield %>
 
 </body>

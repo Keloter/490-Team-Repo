@@ -2263,6 +2263,7 @@ th {
 }
 .table {
   width: 100%;
+  height: 400px;
   max-width: 100%;
   margin-bottom: 20px;
 }
@@ -2446,6 +2447,7 @@ table th[class*="col-"] {
 }
 @media screen and (max-width: 767px) {
   .table-responsive {
+    height: 300px;
     width: 100%;
     margin-bottom: 15px;
     overflow-y: hidden;
@@ -6756,5 +6758,9 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+.pet-table {
+  height: 500px;
+  width:  100%;
 }
 /*# sourceMappingURL=bootstrap.css.map */
