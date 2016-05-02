@@ -40537,3 +40537,137 @@ Processing by ChargesController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"QK5zSJYMvUmwA/E6iROemSBI+kuyVxC9fOptbkcC1Lq4JwA3FXQF02eivi2ifb7NA/H4JswHGuLBCLJtoZ0FFA==", "stripeToken"=>"tok_181hNmLpszdvpujFjnGpgWDx", "stripeTokenType"=>"card", "stripeEmail"=>"bob@bob.com"}
   Rendered charges/create.html.erb within layouts/charges (0.0ms)
 Completed 200 OK in 843ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-02 12:08:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  Rendered layouts/_header.html.erb (346.7ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+  Rendered welcome/index.html.erb within layouts/application (433.0ms)
+Completed 200 OK in 747ms (Views: 738.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/SafeFurrPlace.self-5ec3a26e7f2b962da2928cde6a3024d8d1d3f260502982c22fb72b7de050def2.css?body=1" for ::1 at 2016-05-02 12:08:53 -0700
+
+
+Started GET "/assets/announcements.self-00a94edcd6f4522cffa66ea08d462161e42c36875826c10929b4310cae369a3b.css?body=1" for ::1 at 2016-05-02 12:08:53 -0700
+
+
+Started GET "/assets/attachments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:53 -0700
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:53 -0700
+
+
+Started GET "/assets/bootstrap.self-598365399e6ae8f5a456a189663bac8ef9b8996ace38626328403f280fd63400.css?body=1" for ::1 at 2016-05-02 12:08:53 -0700
+
+
+Started GET "/assets/bootstrap.min.self-66fe84b79c6d5db31355296a8c9627d232721fe3ac3c31f3554ccc7e999279b6.css?body=1" for ::1 at 2016-05-02 12:08:53 -0700
+
+
+Started GET "/assets/documents.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/photo.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/scaffolds.self-ce9ccf46b3d451ec40a700765e6d6b37e289cff94d651ed46d75aeb5ed986f3a.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/static.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/upload.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/uploads.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/volunteer.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/jquery.self-aedf0b4f9535e7b1d01d6a9ad81e6ecdb5b9a82acf17f3798645b7dbca2d86a1.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/turbolinks.self-6fb86ff58d930b560704818c7d9e5f60d83d65b91c6778c7f7e4210d5ba82127.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/announcements.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/attachments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/bootstrap.min.self-d475868eedd65d9ab19f96e8574a2c8ce91ba7d64b8bbfa47cd55591a956ed67.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/bootstrap.self-d0e973a52d36a01036265aeefaf2d1ae3499d2cb231a9be3bd846432daf231de.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/documents.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/photo.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/static.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/upload.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/uploads.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/volunteer.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/slide-1-ded2c4562d7697d6cc1daac85747609ac2a155e55ca9940bc819d259062adf55.jpg" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/facebook-b26dd35b8832b815562d0f7bb08229f61cf2fccb5769851004b8dab48e55047a.png" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/logo-277822bb117826b9643dcf664d7f9824c92c9264faf0bcfbe603189ba1748812.png" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/slide-3-9ea3322c6daf7593081ff5d91e30642c1ccc524d4229d2ffe2f17cb2df5463dc.jpg" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/bg-1ca47574244999ef4511d9812e2467d67cd5849d5163d0c0523fdcbc5bc34113.jpg" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/assets/slide-2-09dc1281444b1fa69207e4fc0a26c9d1f6ccbd2cf6fdce55fccb5a0d4fd5c69e.jpg" for ::1 at 2016-05-02 12:08:54 -0700
+
+
+Started GET "/donate" for ::1 at 2016-05-02 12:09:00 -0700
+Processing by VolunteerController#donate as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+  Rendered volunteer/donate.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 127ms (Views: 136.2ms | ActiveRecord: 0.0ms)
